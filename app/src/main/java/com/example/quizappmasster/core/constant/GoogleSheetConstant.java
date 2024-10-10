@@ -10,7 +10,7 @@ public class GoogleSheetConstant {
      */
     public static final String END_POINT_URL = "https://script.google.com/macros/s/AKfycbzRq0k3HR2Xx3KfNlA4N4R8UBecIUallNyk5Ajr1b2Fy93wdvKcg3-NBHnmNCK49KU/exec";
 
-    public static final String BACKEND_URL = "http://103.218.122.240:8102";
+    public static final String BACKEND_URL = "http://103.218.122.240:8103";
 
 
     /**

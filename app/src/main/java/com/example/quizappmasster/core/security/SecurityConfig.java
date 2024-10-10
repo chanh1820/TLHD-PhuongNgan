@@ -30,7 +30,7 @@ import java.time.LocalDateTime;
 import java.util.Map;
 
 public class SecurityConfig {
-    public static final String TOKEN = "tlhd_dhttll";
+    public static final String TOKEN = "tlhd_lediem";
     private static ObjectMapper objectMapper = new ObjectMapper();
 
     public static void firebase(Context context) {
