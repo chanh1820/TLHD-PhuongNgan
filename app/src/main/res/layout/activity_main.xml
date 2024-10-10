@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.main.MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bg_main">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_gravity="start"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_main_logout"
+            android:background="@drawable/logout"
+            android:layout_width="49dp"
+            android:layout_height="49dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/tv_main_link"
+            android:background="@drawable/link"
+            android:layout_width="50dp"
+            android:visibility="gone"
+            android:layout_marginRight="20dp"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="30dp">
+        <Button
+            android:id="@+id/btn_tin_khan_cap"
+            android:gravity="start|center_vertical"
+            android:background="@drawable/style_bg_button_1"
+            android:layout_marginVertical="16dp"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/holo_blue_11"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:drawableLeft="@drawable/ic_warning"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:text="    Khẩn cấp"/>
+        <Button
+            android:id="@+id/btn_trac_nghiem"
+            android:gravity="start|center_vertical"
+            android:background="@drawable/style_bg_button_1"
+            android:layout_marginVertical="16dp"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/holo_blue_11"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:drawableLeft="@drawable/ic_love"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:text="    Trắc nghiệm"/>
+        <Button
+            android:id="@+id/btn_thao_luan"
+            android:gravity="start|center_vertical"
+            android:background="@drawable/style_bg_button_1"
+            android:layout_marginVertical="16dp"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/holo_blue_11"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:drawableLeft="@drawable/ic_post"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:text="    Thảo luận"/>
+
+    </LinearLayout>
+
+</LinearLayout>

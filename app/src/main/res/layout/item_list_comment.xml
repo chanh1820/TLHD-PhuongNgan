@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:gravity="center">
+    <LinearLayout
+        android:padding="8dp"
+        android:alpha="0.95"
+
+        android:layout_width="match_parent"
+        android:background="@drawable/style_bg_item_comment"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_item_list_comment_display_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif"
+            android:gravity="start"
+            android:justificationMode="inter_word"
+            android:text="Minh Chánh: "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_item_list_comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif"
+            android:gravity="start"
+            android:justificationMode="inter_word"
+            android:text="Bài 9: Tầm quan trọng của việc tuân thủ các quy tắc giao thông đường bộ"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/drawable-v24/custom_backgound_item_1.xml" value="0.121" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/drawable-v24/custom_backgound_item_2.xml" value="0.121" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/drawable-v24/custom_radio_button.xml" value="0.121" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/drawable/custom_button_1.xml" value="0.121" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/drawable/ic_baseline_border_color_24.xml" value="0.121" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" value="0.121" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/drawable/ic_baseline_library_books_24.xml" value="0.1615" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/drawable/ic_baseline_menu_book_24.xml" value="0.121" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/layout/activity_choose_exam.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/layout/activity_choose_exam2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/layout/activity_choose_subject.xml" value="0.16" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/layout/activity_detail_ly_thuyet.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/layout/activity_lam_trac_nghiem.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/QuizAppMasster/app/src/main/res/layout/activity_test_done.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable-v24/button2.xml" value="0.1045" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable-v24/button3.xml" value="0.1045" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable-v24/button4.xml" value="0.187" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable-v24/custom_backgound_item_2.xml" value="0.1045" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable-v24/custom_background_num_exam.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable-v24/custom_radio_button.xml" value="0.1045" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable-v24/custom_splash.xml" value="0.135" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable-v24/gadient.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable-v24/ic_baseline_keyboard_return_24.xml" value="0.1035" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable-v24/ic_baseline_navigate_next_24.xml" value="0.1035" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable-v24/seekbar_progress.xml" value="0.1615" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable-v24/shadow_btn.xml" value="0.164" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable/background_fragment_screen_silde_page_1.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable/custom_background_savescore.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable/custom_button_dong_1.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable/custom_dialog_1.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable/custom_item_gridview_list_answer_.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable/custom_textview_question.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable/ic_baseline_chevron_right_24.xml" value="0.1325" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable/ic_baseline_cruelty_free_24.xml" value="0.1045" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.187" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/font/font.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_choi_game.xml" value="0.33" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_choose_exam.xml" value="0.22" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_choose_exam2.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_choose_he_thong_ly_thuyet.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_choose_subject.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_chosse_subject_trac_nghiem.xml" value="0.33" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_detail_ly_thuyet.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_info_activity.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_lam_trac_nghiem.xml" value="0.15" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_main_choi_game.xml" value="0.15" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_score.xml" value="0.18" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_screen_slide_pager.xml" value="0.35185185185185186" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_sign_in.xml" value="0.33" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_sign_in_2.xml" value="0.18" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_splash.xml" value="0.15" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_test_done.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_test_done_2.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/activity_won.xml" value="0.22" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/allert_dialog_save_score.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/check_answer_dialog.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/custom_item_gridview_list_answer_.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/dialog_choose_luat_bvmt.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/dialog_choose_trac_nghiem_chude.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/dialog_inputname.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/dialog_loser.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/dialog_pause.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/dialog_score.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/dialog_settings.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/dialog_timeout.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/fragment_screen_slide_page.xml" value="0.33" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/item_dapan.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/item_gridview_list_answer.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/item_list_score.xml" value="0.22" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/item_option_chu_de_tracnghiem.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/item_subject_ly_thuyet.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/item_subject_trac_nghiem.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/item_subject_trac_nghiem_2.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/item_traloi.xml" value="0.5" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_Master_DangNgocSang/QuizAppMasster/app/src/main/res/layout/row_cauhoi.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/drawable-v24/corner_button.xml" value="0.1425" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/drawable-v24/corner_shape.xml" value="0.1425" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/drawable-v24/corner_top.xml" value="0.1425" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/drawable-v24/custom_backgound_item_1.xml" value="0.1425" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/drawable-v24/custom_backgound_item_2.xml" value="0.1425" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/drawable-v24/custom_background_num_exam.xml" value="0.1425" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/drawable-v24/custom_background_num_exam_2.xml" value="0.1425" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/drawable/custom_button_1.xml" value="0.1425" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/drawable/custom_button_dong_1.xml" value="0.1425" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/drawable/custom_button_ketthuc_1.xml" value="0.1425" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/drawable/custom_item_gridview_list_answer_.xml" value="0.1425" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/activity_choi_game.xml" value="0.18" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/activity_chosse_subject_trac_nghiem.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/activity_info_activity.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/activity_main_choi_game.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/activity_splash.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/activity_test_done_2.xml" value="0.19927536231884058" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/allert_dialog_save_score.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/check_answer_dialog.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/custom_item_gridview_list_answer_.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/dialog_link.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/dialog_ly_thuyet.xml" value="0.14945652173913043" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/dialog_score.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/dialog_settings.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/fragment_screen_slide_page.xml" value="0.19927536231884058" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/item_choose_ly_thyet.xml" value="0.14945652173913043" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/item_link.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/item_subject_ly_thuyet.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/QA_NgocHan/QuizAppMasster/app/src/main/res/layout/item_subject_trac_nghiem.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/TLHD-VoDat/QuizAppMasster/app/src/main/res/drawable/style_bg_button_1.xml" value="0.134" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/TLHD-VoDat/QuizAppMasster/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/TLHD-VoDat/QuizAppMasster/app/src/main/res/layout/activity_sign_in.xml" value="0.10833333333333334" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/TLHD-VoDat/QuizAppMasster/app/src/main/res/layout/dialog_process_bar.xml" value="0.10833333333333334" />
+        <entry key="..\:/Users/HP/Desktop/DoAnSinhVien/customer/TLHD-VoDat/QuizAppMasster/app/src/main/res/layout/dialog_timeout.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ln_item_list_post"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:gravity="center">
+    <LinearLayout
+        android:padding="8dp"
+        android:alpha="0.95"
+
+        android:layout_width="match_parent"
+        android:background="@drawable/style_bg_item_subject"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_item_list_post_author"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@color/xanh_nuoc_bien"
+                android:text="Minh chánh"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/tv_item_list_post_create_date"
+                android:layout_margin="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textColor="@color/xanh_nuoc_bien"
+                android:text="2023/12/31 18:00:00"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_item_list_post_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif"
+            android:gravity="start"
+
+            android:justificationMode="inter_word"
+            android:text="Bài 9: Tầm quan trọng của việc tuân thủ các quy tắc giao thông đường bộ"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/tv_item_list_post_count_like"
+                android:textStyle="bold"
+                android:layout_margin="2dp"
+                android:drawableRight="@drawable/ic_like"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textColor="@color/xanh_nuoc_bien"
+                android:text="20"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/tv_item_list_post_count_comment"
+                android:layout_margin="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:drawableRight="@drawable/ic_comment"
+                android:gravity="center_vertical"
+                android:textColor="@color/xanh_nuoc_bien"
+                android:text="12"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

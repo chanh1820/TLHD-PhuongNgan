@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.admin.danhsachdiem.ListScoreActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="18dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên:"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edt_liss_score_studen_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/style_edt_text_1"
+                android:paddingLeft="16dp"
+                android:paddingRight="8dp"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/imb_list_score_delete_text"
+                style="?android:buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-60dp"
+                android:paddingBottom="5dp"
+                android:src="@drawable/ic_baseline_close_24"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lớp:"
+                android:textAlignment="center"
+                android:textColor="@color/purple_500"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spn_list_code_class_room"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/style_spinner"
+                android:dropDownVerticalOffset="40dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Điểm:"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_500"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/edt_list_score_min_score"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/style_edt_text_1"
+                        android:dropDownVerticalOffset="40dp"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="0" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_baseline_arrow_right_alt_24" />
+
+                    <EditText
+                        android:id="@+id/edt_list_score_max_score"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/style_edt_text_1"
+                        android:dropDownVerticalOffset="40dp"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="10" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Tìm"
+        android:layout_marginTop="8dp"
+        android:id="@+id/btn_list_score_search"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/tim_kiem"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_score"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
