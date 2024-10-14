@@ -42,22 +42,14 @@ public class DBConstant {
         add(new SubjectLyThuyetDTO(3, "A03", "Luật"));
     }};
     public static final List<String> CLASS_ROOM_STRING = new ArrayList<String>() {{
-        add("10.1");
-        add("10.2");
-        add("10.3");
-        add("10.4");
-        add("10.5");
-        add("10.6");
-        add("11.1");
-        add("11.2");
-        add("11.3");
-        add("11.4");
-        add("11.5");
-        add("12.1");
-        add("12.2");
-        add("12.3");
-        add("12.4");
-        add("12.5");
+        add("6A1");
+        add("6A2");
+        add("6A3");
+        add("6A4");
+        add("7A1");
+        add("7A2");
+        add("7A3");
+        add("7A4");
     }};
     public static final Integer DIEM_TRAC_NGHIEM_1 = 1;
 

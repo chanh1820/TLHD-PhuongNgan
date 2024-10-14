@@ -51,11 +51,10 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        btnSignIn = findViewById(R.id.btn_SignIn);
-        btnSkip = findViewById(R.id.btn_skip);
+        btnSignIn = findViewById(R.id.btn_login);
         edtUserName = findViewById(R.id.edt_user_name);
-        edtPassWord = findViewById(R.id.edt_password);
-        tvRegistry = findViewById(R.id.tv_registry);
+        edtPassWord = findViewById(R.id.edt_pass_word);
+        tvRegistry = findViewById(R.id.tv_sign_registry);
         pgMain = findViewById(R.id.pg_main);
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override

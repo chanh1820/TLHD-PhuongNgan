@@ -51,7 +51,7 @@ public class ListScoreAdapter extends RecyclerView.Adapter<ListScoreAdapter.MyVi
         holder.tvIndex.setText(String.valueOf(position + 1) );
         holder.tvStudentInfo.setText(item.getDisplayName() + " | " + item.getClassRoom());
         holder.tvCreateDate.setText(item.getCreatedDate());
-        holder.tvScore.setText(item.getNumTrue() + " | " + item.getPoint() + " Điểm");
+        holder.tvScore.setText(item.getPoint() + " Điểm");
 
     }
 

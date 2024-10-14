@@ -197,7 +197,6 @@ void saveScore (){
     scoreDTO.setDisplayName(accountDTO.getDisplayName());
     scoreDTO.setClassRoom(accountDTO.getClassRoom());
     scoreDTO.setDescription(title);
-    scoreDTO.setNumTrue("");
     scoreDTO.setPoint(point);
     scoreDTO.setCreatedDateValue(DateTimeUtils.convertTimeToInteger(new Date().getTime()));
     scoreDTO.setCreatedDate(DateTimeFormatter.ofPattern("HH:mm dd/MM/yyyy ").format(LocalDateTime.now()));

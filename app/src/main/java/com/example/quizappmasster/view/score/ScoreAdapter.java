@@ -35,13 +35,11 @@ public class ScoreAdapter extends ArrayAdapter<ScoreDTO> {
         TextView txtScore= convertView.findViewById(R.id.txtScore);
         TextView txtPlayerName= convertView.findViewById(R.id.txtPlayerName);
         TextView txtDate= convertView.findViewById(R.id.txtTime);
-        TextView txtNumTrue= convertView.findViewById(R.id.txtNumTrue);
 
         ScoreDTO item = getItem(position);
         txtPlayerName.setText(item.getDisplayName());
         txtScore.setText(item.getPoint()+" Điểm");
         txtDate.setText(item.getCreatedDate());
-        txtNumTrue.setText(item.getNumTrue());
         return convertView;
     }
 
