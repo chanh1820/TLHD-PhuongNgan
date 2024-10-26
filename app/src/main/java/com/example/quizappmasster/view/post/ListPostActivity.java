@@ -156,7 +156,7 @@ public class ListPostActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(ListPostActivity.this, SavePostActivity.class);
-                i.putExtra(KeyConstants.INTENT_KEY_TOPIC_CODE,topicCode);
+                i.putExtra(KeyConstants.INTENT_KEY_TOPIC_CODE, topicCode);
                 startActivity(i);
             }
         });

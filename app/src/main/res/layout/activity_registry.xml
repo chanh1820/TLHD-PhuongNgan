@@ -119,6 +119,12 @@
             android:drawablePadding="12dp"
             />
     </LinearLayout>
+    <ProgressBar
+        android:id="@+id/pb_registry_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_gravity="center"/>
     <Button
         android:id="@+id/btn_registry_accept"
         android:layout_width="wrap_content"

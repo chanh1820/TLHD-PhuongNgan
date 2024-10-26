@@ -42,14 +42,22 @@ public class DBConstant {
         add(new SubjectLyThuyetDTO(3, "A03", "Luật"));
     }};
     public static final List<String> CLASS_ROOM_STRING = new ArrayList<String>() {{
-        add("6A1");
-        add("6A2");
-        add("6A3");
-        add("6A4");
-        add("7A1");
-        add("7A2");
-        add("7A3");
-        add("7A4");
+        add("6-1");
+        add("6-2");
+        add("6-3");
+        add("6-4");
+        add("7-1");
+        add("7-2");
+        add("7-3");
+        add("7-4");
+        add("8-1");
+        add("8-2");
+        add("8-3");
+        add("8-4");
+        add("9-1");
+        add("9-2");
+        add("9-3");
+        add("9-4");
     }};
     public static final Integer DIEM_TRAC_NGHIEM_1 = 1;
 
@@ -64,14 +72,22 @@ public class DBConstant {
 
     public static List<String> LIST_CLASS_ROOM = new ArrayList<String>() {{
         add("Tất cả");
-        add("6A1");
-        add("6A2");
-        add("6A3");
-        add("6A4");
-        add("7A1");
-        add("7A2");
-        add("7A3");
-        add("7A4");
+        add("6-1");
+        add("6-2");
+        add("6-3");
+        add("6-4");
+        add("7-1");
+        add("7-2");
+        add("7-3");
+        add("7-4");
+        add("8-1");
+        add("8-2");
+        add("8-3");
+        add("8-4");
+        add("9-1");
+        add("9-2");
+        add("9-3");
+        add("9-4");
     }};
 
     public static final List<SuggestResultDTO> suggestResultDTOListLv1 = new ArrayList<SuggestResultDTO>() {{
@@ -199,6 +215,9 @@ public class DBConstant {
         put(100, suggestResultDTOListLv1);
     }};
 
-    public static final String TOPIC_CODE_1 = "TP01";
-    public static final String TOPIC_CODE_2 = "TP02";
+    public static final String TOPIC_KHANCAP = "KHANCAP";
+    public static final String TOPIC_TUVANCHIASE = "TUVANCHIASE";
+    public static final String TOPIC_CHAMSOCSUCKHOE = "CHAMSOCSUCKHOE";
+    public static final String TOPIC_KYNANGSONG = "KYNANGSONG";
+    public static final String TOPIC_GOCHUALANH = "GOCHUALANH";
 }

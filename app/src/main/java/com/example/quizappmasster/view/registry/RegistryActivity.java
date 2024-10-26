@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,6 +42,7 @@ import java.util.Map;
 public class RegistryActivity extends AppCompatActivity {
     EditText edtDisplayName, edtUserName, edtPassWord1, edtPassWord2;
     Button btnRegistry;
+    ProgressBar pbLoading;
     Spinner spnChooseClassRoom;
     AccountDTO accountDTO = new AccountDTO();
 
@@ -58,26 +60,31 @@ public class RegistryActivity extends AppCompatActivity {
         btnRegistry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                pbLoading.setVisibility(View.VISIBLE);
                 String displayName = edtDisplayName.getText().toString().trim();
                 String userName = edtUserName.getText().toString().trim();
                 String passWord1 = edtPassWord1.getText().toString().trim();
                 String passWord2 = edtPassWord2.getText().toString().trim();
                 if (displayName.isEmpty() ||userName.isEmpty()||passWord1.isEmpty()||passWord2.isEmpty()){
                     NotifyUtils.defaultNotify(getApplicationContext(), "Thông tin chưa chính xác");
+                    pbLoading.setVisibility(View.INVISIBLE);
                     return;
                 }
                 if (!passWord1.equals(passWord2)){
                     NotifyUtils.defaultNotify(getApplicationContext(), "Mật khẩu xác nhận không khớp");
+                    pbLoading.setVisibility(View.INVISIBLE);
                     return;
                 }
                 ValidateUtils validateUtils = new ValidateUtils();
                 if (!validateUtils.validatePassword(passWord1)){
-                    NotifyUtils.defaultNotify(getApplicationContext(), "Mật khẩu không hợp lệ");
+                    NotifyUtils.defaultNotify(getApplicationContext(), "Mật khẩu trên 6 ký tự gồm số và chữ");
+                    pbLoading.setVisibility(View.INVISIBLE);
                     return;
                 }
 
                 if (!validateUtils.validateUserName(userName)){
                     NotifyUtils.defaultNotify(getApplicationContext(), "Tên đăng nhập không hợp lệ");
+                    pbLoading.setVisibility(View.INVISIBLE);
                     return;
                 }
 
@@ -97,6 +104,7 @@ public class RegistryActivity extends AppCompatActivity {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, GoogleSheetConstant.END_POINT_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                pbLoading.setVisibility(View.INVISIBLE);
                 Log.e("response", response);
                 ResponseDTO<AccountDTO> responseDTO
                         = ObjectMapperUtils.stringToTypeReference(
@@ -116,6 +124,7 @@ public class RegistryActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 btnRegistry.setFocusable(true);
+                pbLoading.setVisibility(View.INVISIBLE);
                 Toast.makeText(getApplicationContext(), "Bạn chưa bật kết nối Internet ?", Toast.LENGTH_LONG).show();
             }
         }) {
@@ -141,6 +150,7 @@ public class RegistryActivity extends AppCompatActivity {
         edtPassWord1 = findViewById(R.id.edt_registry_pass_word_1);
         edtPassWord2 = findViewById(R.id.edt_registry_pass_word_2);
         btnRegistry = findViewById(R.id.btn_registry_accept);
+        pbLoading = findViewById(R.id.pb_registry_loading);
         spnChooseClassRoom = findViewById(R.id.spn_choose_class_room);
 
         chooseClassRoomAdapter = new ChooseClassRoomAdapter(getApplicationContext(), DBConstant.CLASS_ROOM_STRING);

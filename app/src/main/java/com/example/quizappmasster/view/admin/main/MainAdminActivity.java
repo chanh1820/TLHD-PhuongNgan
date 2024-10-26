@@ -41,7 +41,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.io.IOException;
 
 public class MainAdminActivity extends AppCompatActivity {
-    Button btnKhanCap, btnTracNghiem, btnThaoLuan, btnListScore;
+    Button btnKhanCap, btnTuVanChiaSe, btnChamSocSucKhoe, btnKyNangSong, btnGocChuaLanh, btnTracNghiem, btnListScore;
+
     TextView tvInfo, tvLogOut;
     AccountDTO accountDTO;
     GoogleSheetAPIService googleSheetAPIService;
@@ -53,7 +54,7 @@ public class MainAdminActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_admin_2);
+        setContentView(R.layout.activity_main_admin);
         SecurityConfig.firebase(getApplicationContext());
         initView();
         actions();
@@ -67,19 +68,53 @@ public class MainAdminActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        btnThaoLuan.setOnClickListener(new View.OnClickListener() {
+        btnTracNghiem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), ListPostActivity.class);
-                i.putExtra(KeyConstants.INTENT_KEY_TOPIC_CODE, DBConstant.TOPIC_CODE_1);
+                Intent i = new Intent(getApplicationContext(), ChooseSubjectActivity.class);
                 startActivity(i);
             }
         });
+
         btnKhanCap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), ListPostActivity.class);
-                i.putExtra(KeyConstants.INTENT_KEY_TOPIC_CODE, DBConstant.TOPIC_CODE_2);
+                i.putExtra(KeyConstants.INTENT_KEY_TOPIC_CODE, DBConstant.TOPIC_KHANCAP);
+                startActivity(i);
+            }
+        });
+        btnChamSocSucKhoe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), ListPostActivity.class);
+                i.putExtra(KeyConstants.INTENT_KEY_TOPIC_CODE, DBConstant.TOPIC_CHAMSOCSUCKHOE);
+                startActivity(i);
+            }
+        });
+        btnTuVanChiaSe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), ListPostActivity.class);
+                i.putExtra(KeyConstants.INTENT_KEY_TOPIC_CODE, DBConstant.TOPIC_TUVANCHIASE);
+                startActivity(i);
+            }
+        });
+
+        btnKyNangSong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), ListPostActivity.class);
+                i.putExtra(KeyConstants.INTENT_KEY_TOPIC_CODE, DBConstant.TOPIC_KYNANGSONG);
+                startActivity(i);
+            }
+        });
+
+        btnGocChuaLanh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), ListPostActivity.class);
+                i.putExtra(KeyConstants.INTENT_KEY_TOPIC_CODE, DBConstant.TOPIC_GOCHUALANH);
                 startActivity(i);
             }
         });
@@ -165,8 +200,11 @@ public class MainAdminActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         btnTracNghiem = findViewById(R.id.btn_trac_nghiem);
-        btnKhanCap = findViewById(R.id.btn_tin_khan_cap);
-        btnThaoLuan = findViewById(R.id.btn_thao_luan);
+        btnKhanCap = findViewById(R.id.btn_khan_cap);
+        btnTuVanChiaSe = findViewById(R.id.btn_tuvanchiase);
+        btnChamSocSucKhoe = findViewById(R.id.btn_chamsocsuckhoe);
+        btnKyNangSong = findViewById(R.id.btn_ky_nang_song);
+        btnGocChuaLanh = findViewById(R.id.btn_gocchualanh);
         tvInfo = findViewById(R.id.tv_main_link);
         tvLogOut = findViewById(R.id.tv_main_logout);
         btnListScore = findViewById(R.id.btn_admin_main_danh_sach_diem);

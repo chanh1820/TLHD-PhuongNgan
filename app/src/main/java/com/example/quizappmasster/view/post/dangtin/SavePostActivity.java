@@ -87,9 +87,9 @@ public class SavePostActivity extends AppCompatActivity {
                         if (responseDTO.getStatusCode().equals(GoogleSheetConstant.STATUS_SUCCESS)){
                             Log.e("response", "1");
                             NotifyUtils.defaultNotify(getApplicationContext(), "Đăng tin thành công");
-                            if(topicCode.equals(DBConstant.TOPIC_CODE_2)){
-                                showDialog();
-                            }
+//                            if(topicCode.equals(DBConstant.TOPIC_CODE_2)){
+//                                showDialog();
+//                            }
                         }else {
                             Log.e("response", "2");
                             NotifyUtils.defaultNotify(getApplicationContext(), "Đăng tin không thành công");

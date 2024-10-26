@@ -5,74 +5,173 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg_main"
-    tools:context=".view.main.MainActivity"
-    >
+    android:background="@drawable/bg_gadient">
     <LinearLayout
+        android:gravity="center_vertical|top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_gravity="start"
+        android:padding="8dp"
+        android:background="@drawable/bg_main_2"
+        android:layout_height="150dp">
         <TextView
-            android:id="@+id/tv_main_admin_logout"
-            android:background="@drawable/logout"
-            android:layout_width="49dp"
-            android:layout_height="49dp"/>
+            android:id="@+id/tv_main_link"
+            android:background="@drawable/link"
+            android:layout_width="50dp"
+            android:visibility="gone"
+            android:layout_marginRight="20dp"
+            android:layout_height="50dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
 
+        <TextView
+            android:id="@+id/tv_main_logout"
+            android:background="@drawable/logout"
+            android:layout_width="49dp"
+            android:layout_height="49dp"/>
+    </LinearLayout>
 
+    <LinearLayout
+
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <Button
+            android:id="@+id/btn_khan_cap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/style_bg_button_1"
+            android:drawableLeft="@drawable/ic_khancap"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="start|center_vertical"
+            android:padding="8dp"
+            android:text="    Khẩn cấp"
+            android:textColor="#F5FD7B"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_tuvanchiase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/style_bg_button_1"
+            android:drawableLeft="@drawable/ic_tuvanchiase"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="start|center_vertical"
+            android:padding="8dp"
+            android:text="    Tư vấn - chia sẻ"
+            android:textColor="#F5FD7B"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_chamsocsuckhoe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/style_bg_button_1"
+            android:drawableLeft="@drawable/ic_chamsocsuckhoe"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="start|center_vertical"
+            android:padding="8dp"
+            android:text="    Chăm sóc sức khoẻ"
+            android:textColor="#F5FD7B"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_ky_nang_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/style_bg_button_1"
+            android:drawableLeft="@drawable/ic_kynangsong"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="start|center_vertical"
+            android:padding="8dp"
+            android:text="    Kỹ năng sống"
+            android:textColor="#F5FD7B"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_gocchualanh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/style_bg_button_1"
+            android:drawableLeft="@drawable/ic_chualanh"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="start|center_vertical"
+            android:padding="8dp"
+            android:text="    Góc chữa lành"
+            android:textColor="#F5FD7B"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_trac_nghiem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/style_bg_button_1"
+            android:drawableLeft="@drawable/ic_post"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="start|center_vertical"
+            android:padding="8dp"
+            android:text="    Câu KHẢO SÁT"
+            android:textColor="#F5FD7B"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btn_admin_main_danh_sach_diem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/style_bg_button_1"
+            android:drawableLeft="@drawable/ic_score"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="start|center_vertical"
+            android:padding="8dp"
+            android:textColor="#F5FD7B"
+            android:textSize="16sp"
+            android:text="   Danh sách điểm"
+            android:textStyle="bold" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_margin="8dp"
-        android:orientation="vertical"
-        android:padding="4dp">
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="8dp"
         android:gravity="center"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="152dp">
-
+        android:layout_weight="1">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="20dp" />
-        <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="30dp">
-            <Button
-                android:backgroundTint="@android:color/holo_blue_light"
-                android:gravity="left|center_vertical"
-                android:id="@+id/btn_admin_main_danh_sach_diem"
-                android:layout_marginVertical="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:drawableLeft="@drawable/ic_baseline_search_24"
-                android:drawableRight="@drawable/ic_baseline_chevron_right_24"
-                android:text="  Danh sách điểm"/>
-        </LinearLayout>
-        <LinearLayout
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-
-
-        </LinearLayout>
-
-
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="Luôn luôn lắng nghe\nSẳn sàng chia sẻ!"
+            />
     </LinearLayout>
 </LinearLayout>
