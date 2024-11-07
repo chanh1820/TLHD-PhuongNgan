@@ -15,6 +15,12 @@
         android:id="@+id/tv_detail_post_author"
         android:layout_height="wrap_content"
         android:text="Minh chánh"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="16dp"
+        android:clipToPadding="false"/>
     <TextView
         android:layout_width="match_parent"
         android:textStyle="bold"

@@ -23,6 +23,7 @@ public class PostDTO {
     private String userId;
 
     private String author;
+    private String fileame;
 
     private String createDate;
     private String updateDate;
