@@ -23,7 +23,8 @@ public class PostDTO {
     private String userId;
 
     private String author;
-    private String fileame;
+
+    private String listFile;
 
     private String createDate;
     private String updateDate;
@@ -153,5 +154,21 @@ public class PostDTO {
 
     public void setIsLike(Boolean isLike) {
         this.isLike = isLike;
+    }
+
+    public String getListFile() {
+        return listFile;
+    }
+
+    public void setListFile(String listFile) {
+        this.listFile = listFile;
+    }
+
+    public Boolean getLike() {
+        return isLike;
+    }
+
+    public void setLike(Boolean like) {
+        isLike = like;
     }
 }

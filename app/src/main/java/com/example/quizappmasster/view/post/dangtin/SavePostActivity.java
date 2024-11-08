@@ -67,7 +67,7 @@ import okhttp3.RequestBody;
 public class SavePostActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_SELECT_FILES = 1;
 
-    private Button btnChooseFiles, btnUploadFiles;
+    private Button btnChooseFiles;
     private TextView tvSelectedFiles;
     private List<File> selectedFiles = new ArrayList<>();
     TextView tvDisplayName;
@@ -175,7 +175,7 @@ public class SavePostActivity extends AppCompatActivity {
         edtContent = findViewById(R.id.edt_save_post_content);
         btnSavePost = findViewById(R.id.btn_save_post_save);
         btnChooseFiles = findViewById(R.id.btn_save_post_choose_file);
-
+        tvSelectedFiles = findViewById(R.id.tvSelectedFiles);
         tvDisplayName.setText(accountDTO.getDisplayName());
     }
 
@@ -236,7 +236,6 @@ public class SavePostActivity extends AppCompatActivity {
                 }
 
                 tvSelectedFiles.setText(fileNames.toString());
-                btnUploadFiles.setEnabled(!selectedFiles.isEmpty()); // Enable upload button if files are selected
             }
         }
     }
@@ -284,8 +283,10 @@ public class SavePostActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Call call, okhttp3.Response response) throws IOException {
+                Log.e(" okhttp3.Response", ObjectMapperUtils.dtoToString( response));
                 if (response.isSuccessful()) {
                     runOnUiThread(() -> {
+                        Log.e("response.body().toString()", response.body().toString());
                         ResponseUploadFileDTO responseUploadFileDTO = ObjectMapperUtils.stringToTypeReference(response.body().toString(), new TypeReference<ResponseUploadFileDTO>() {});
                         callSavePost(responseUploadFileDTO.getData());
                         Toast.makeText(SavePostActivity.this, "Upload ảnh thành công", Toast.LENGTH_SHORT).show();

@@ -1,6 +1,7 @@
 package com.example.quizappmasster.view.post.detailpost;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,11 +40,13 @@ import com.example.quizappmasster.core.util.NotifyUtils;
 import com.example.quizappmasster.core.util.ObjectMapperUtils;
 import com.example.quizappmasster.view.post.ListPostActivity;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.google.android.gms.common.util.CollectionUtils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 import java.util.Map;
 
 public class DetailPostActivity extends AppCompatActivity {
@@ -52,8 +55,8 @@ public class DetailPostActivity extends AppCompatActivity {
     ImageButton imbIconLike;
     Button btnSend;
     EditText edtInputComment;
-
-
+    RecyclerView rvListImage;
+    ImageListAdapter imageListAdapter;
 
     AccountDTO accountDTO = new AccountDTO();
     ListCommentAdapter listCommentAdapter;
@@ -269,7 +272,10 @@ public class DetailPostActivity extends AppCompatActivity {
         imbIconLike = findViewById(R.id.imb_detail_post_like);
         edtInputComment = findViewById(R.id.edt_detail_post_input_comment);
         btnSend = findViewById(R.id.btn_detail_post_send_comment);
-        tvContent.setMovementMethod(new ScrollingMovementMethod());
+        rvListImage = findViewById(R.id.tv_detail_post_list_image);
+        rvListImage.setLayoutManager(new LinearLayoutManager(this));
+
+
 
 
         tvCountLike = findViewById(R.id.tv_detail_post_count_like);
@@ -307,6 +313,17 @@ public class DetailPostActivity extends AppCompatActivity {
                         imbIconLike.setBackgroundResource(R.drawable.ic_liked);
                     }else {
                         imbIconLike.setBackgroundResource(R.drawable.ic_non_like);
+                    }
+
+                    List<String> listImage = ObjectMapperUtils.stringToTypeReference(postDTO.getListFile(), new TypeReference<List<String>>(){});
+                    if(CollectionUtils.isEmpty(listImage) || listImage.size() == 0){
+                        imageListAdapter = new ImageListAdapter(listImage);
+                        rvListImage.setAdapter(imageListAdapter);
+                        RecyclerView.ItemAnimator animator = new DefaultItemAnimator();
+                        rvListImage.setItemAnimator(animator);
+                        tvContent.setMovementMethod(new ScrollingMovementMethod());
+                    }else {
+                        rvListImage.setVisibility(View.GONE);
                     }
                 }else {
                     NotifyUtils.defaultNotify(getApplicationContext(), "Đăng tin không thành công");
