@@ -25,6 +25,7 @@ public class ObjectMapperUtils {
     }
 
     public static <D, T> D stringToTypeReference(final String entitys, TypeReference<D> typeReference) {
+        Log.e("stringToTypeReference", entitys);
         try {
             return objectMapper.readValue(entitys, typeReference);
         } catch (IOException e) {

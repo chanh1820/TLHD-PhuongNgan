@@ -101,7 +101,7 @@ public class DetailPostActivity extends AppCompatActivity {
                 jsonParams.put("content", input);
                 jsonParams.put("postId", postDTO.getId());
                 jsonParams.put("author", accountDTO.getDisplayName());
-                StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8102/post/comment/insert", new Response.Listener<String>() {
+                StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8103/post/comment/insert", new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         Log.e("response", response);
@@ -158,7 +158,7 @@ public class DetailPostActivity extends AppCompatActivity {
         jsonParams.put("userName", accountDTO.getUserName());
         jsonParams.put("type", DBConstant.TYPE_INTERACTION_LIKE);
         jsonParams.put("postId", postDTO.getId());
-        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8102/post/interact/delete", new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8103/post/interact/delete", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("response", response);
@@ -213,7 +213,7 @@ public class DetailPostActivity extends AppCompatActivity {
         jsonParams.put("userName", accountDTO.getUserName());
         jsonParams.put("type", DBConstant.TYPE_INTERACTION_LIKE);
         jsonParams.put("postId",  postDTO.getId());
-        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8102/post/interact/insert", new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8103/post/interact/insert", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("response", response);
@@ -282,7 +282,7 @@ public class DetailPostActivity extends AppCompatActivity {
         tvCountComment = findViewById(R.id.tv_detail_post_count_comment);
         rvListComment = findViewById(R.id.rv_list_comment);
         LinearLayoutManager llm = new LinearLayoutManager(DetailPostActivity.this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        llm.setOrientation(LinearLayoutManager.HORIZONTAL);
         rvListComment.setLayoutManager(llm);
         fetchDetailPost(postId);
     }
@@ -292,7 +292,7 @@ public class DetailPostActivity extends AppCompatActivity {
         jsonParams.put("userId", accountDTO.getUserName());
         jsonParams.put("type", DBConstant.TYPE_INTERACTION_LIKE);
         jsonParams.put("id", postId);
-        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8102/post/get", new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8103/post/get", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("response", response);
@@ -315,16 +315,16 @@ public class DetailPostActivity extends AppCompatActivity {
                         imbIconLike.setBackgroundResource(R.drawable.ic_non_like);
                     }
 
-//                    List<String> listImage = ObjectMapperUtils.stringToTypeReference(postDTO.getListFile(), new TypeReference<List<String>>(){});
-//                    if(CollectionUtils.isEmpty(listImage) || listImage.size() == 0){
-//                        imageListAdapter = new ImageListAdapter(listImage);
-//                        rvListImage.setAdapter(imageListAdapter);
-//                        RecyclerView.ItemAnimator animator = new DefaultItemAnimator();
-//                        rvListImage.setItemAnimator(animator);
-//                        tvContent.setMovementMethod(new ScrollingMovementMethod());
-//                    }else {
-//                        rvListImage.setVisibility(View.GONE);
-//                    }
+                    List<String> listImage = ObjectMapperUtils.stringToTypeReference(postDTO.getListFile(), new TypeReference<List<String>>(){});
+                    if(CollectionUtils.isEmpty(listImage) || listImage.size() == 0){
+                        rvListImage.setVisibility(View.GONE);
+                    }else {
+                        imageListAdapter = new ImageListAdapter(listImage);
+                        rvListImage.setAdapter(imageListAdapter);
+                        RecyclerView.ItemAnimator animator = new DefaultItemAnimator();
+                        rvListImage.setItemAnimator(animator);
+                        tvContent.setMovementMethod(new ScrollingMovementMethod());
+                    }
                 }else {
                     NotifyUtils.defaultNotify(getApplicationContext(), "Đăng tin không thành công");
                     finish();

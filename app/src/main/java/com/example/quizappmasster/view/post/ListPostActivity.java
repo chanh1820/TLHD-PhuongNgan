@@ -83,7 +83,7 @@ public class ListPostActivity extends AppCompatActivity {
         jsonParams.put("limit", 30);
         jsonParams.put("deleteFlag", false);
         jsonParams.put("topicCode", topicCode);
-        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8102/post/search_post", new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8103/post/search_post", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("response", response);

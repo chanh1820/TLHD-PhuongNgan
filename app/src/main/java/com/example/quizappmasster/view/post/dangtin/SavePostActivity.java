@@ -63,6 +63,7 @@ import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
 import okhttp3.RequestBody;
+import okhttp3.internal.http.RealResponseBody;
 
 public class SavePostActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_SELECT_FILES = 1;
@@ -89,13 +90,15 @@ public class SavePostActivity extends AppCompatActivity {
         btnSavePost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                callSavePost(new ArrayList<>());
-
-//                uploadFiles();
+                if (selectedFiles.isEmpty() || selectedFiles.size() == 0){
+                    callSavePost(new ArrayList<>());
+                }else {
+                    uploadFiles();
+                }
             }
         });
 
-//        btnChooseFiles.setOnClickListener(v -> openFileChooser());
+        btnChooseFiles.setOnClickListener(v -> openFileChooser());
 
     }
     void callSavePost(List<String> files){
@@ -110,7 +113,7 @@ public class SavePostActivity extends AppCompatActivity {
             files = new ArrayList<>();
         }
         jsonParams.put("listFile", ObjectMapperUtils.dtoToString(files));
-        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8102/post/insert", new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8103/post/insert", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("response", response);
@@ -279,7 +282,7 @@ public class SavePostActivity extends AppCompatActivity {
     private void uploadFiles() {
         String userName = DBConstant.USER_NAME_UPLOAD_FILES; // Replace with actual user name if needed
 
-        uploadFiles(selectedFiles, userName, new Callback() {
+        callUploadFiles(selectedFiles, userName, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
@@ -290,11 +293,13 @@ public class SavePostActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Call call, okhttp3.Response response) throws IOException {
-                Log.e(" okhttp3.Response", ObjectMapperUtils.dtoToString( response));
+//                Log.e(" okhttp3.Response", ObjectMapperUtils.dtoToString( response));
                 if (response.isSuccessful()) {
+                    String responseBodyString = response.body().string(); // Get the response content as a String
+
+                    Log.e("response.body().toString()", responseBodyString);
+                    ResponseUploadFileDTO responseUploadFileDTO = ObjectMapperUtils.stringToTypeReference(responseBodyString, new TypeReference<ResponseUploadFileDTO>() {});
                     runOnUiThread(() -> {
-                        Log.e("response.body().toString()", response.body().toString());
-                        ResponseUploadFileDTO responseUploadFileDTO = ObjectMapperUtils.stringToTypeReference(response.body().toString(), new TypeReference<ResponseUploadFileDTO>() {});
                         callSavePost(responseUploadFileDTO.getData());
                         Toast.makeText(SavePostActivity.this, "Upload ảnh thành công", Toast.LENGTH_SHORT).show();
                     });
@@ -307,7 +312,7 @@ public class SavePostActivity extends AppCompatActivity {
         });
     }
 
-    public static void uploadFiles(List<File> files, String userName, Callback callback) {
+    public static void callUploadFiles(List<File> files, String userName, Callback callback) {
         OkHttpClient client = new OkHttpClient();
 
         // Create multipart form data request
@@ -326,6 +331,8 @@ public class SavePostActivity extends AppCompatActivity {
         RequestBody requestBody = builder.build();
         okhttp3.Request request = new okhttp3.Request.Builder()
                 .url("http://103.218.122.240:9000/api/file/multi-file-upload")
+                .addHeader("Accept", "application/json")
+                .addHeader("Content-Type", "multipart/form-data")
                 .post(requestBody)
                 .build();
         // Make asynchronous call
