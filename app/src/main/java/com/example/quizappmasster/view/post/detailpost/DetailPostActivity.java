@@ -315,16 +315,16 @@ public class DetailPostActivity extends AppCompatActivity {
                         imbIconLike.setBackgroundResource(R.drawable.ic_non_like);
                     }
 
-                    List<String> listImage = ObjectMapperUtils.stringToTypeReference(postDTO.getListFile(), new TypeReference<List<String>>(){});
-                    if(CollectionUtils.isEmpty(listImage) || listImage.size() == 0){
-                        imageListAdapter = new ImageListAdapter(listImage);
-                        rvListImage.setAdapter(imageListAdapter);
-                        RecyclerView.ItemAnimator animator = new DefaultItemAnimator();
-                        rvListImage.setItemAnimator(animator);
-                        tvContent.setMovementMethod(new ScrollingMovementMethod());
-                    }else {
-                        rvListImage.setVisibility(View.GONE);
-                    }
+//                    List<String> listImage = ObjectMapperUtils.stringToTypeReference(postDTO.getListFile(), new TypeReference<List<String>>(){});
+//                    if(CollectionUtils.isEmpty(listImage) || listImage.size() == 0){
+//                        imageListAdapter = new ImageListAdapter(listImage);
+//                        rvListImage.setAdapter(imageListAdapter);
+//                        RecyclerView.ItemAnimator animator = new DefaultItemAnimator();
+//                        rvListImage.setItemAnimator(animator);
+//                        tvContent.setMovementMethod(new ScrollingMovementMethod());
+//                    }else {
+//                        rvListImage.setVisibility(View.GONE);
+//                    }
                 }else {
                     NotifyUtils.defaultNotify(getApplicationContext(), "Đăng tin không thành công");
                     finish();

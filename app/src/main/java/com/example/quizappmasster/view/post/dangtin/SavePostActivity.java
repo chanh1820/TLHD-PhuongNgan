@@ -89,11 +89,13 @@ public class SavePostActivity extends AppCompatActivity {
         btnSavePost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                uploadFiles();
+                callSavePost(new ArrayList<>());
+
+//                uploadFiles();
             }
         });
 
-        btnChooseFiles.setOnClickListener(v -> openFileChooser());
+//        btnChooseFiles.setOnClickListener(v -> openFileChooser());
 
     }
     void callSavePost(List<String> files){
@@ -104,6 +106,9 @@ public class SavePostActivity extends AppCompatActivity {
         jsonParams.put("content", edtContent.getText().toString().trim());
         jsonParams.put("userId", accountDTO.getUserName());
         jsonParams.put("author", accountDTO.getDisplayName());
+        if(files.isEmpty() || files.size() == 0){
+            files = new ArrayList<>();
+        }
         jsonParams.put("listFile", ObjectMapperUtils.dtoToString(files));
         StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8102/post/insert", new Response.Listener<String>() {
             @Override
@@ -115,6 +120,8 @@ public class SavePostActivity extends AppCompatActivity {
                 if (responseDTO.getStatusCode().equals(GoogleSheetConstant.STATUS_SUCCESS)){
                     Log.e("response", "1");
                     NotifyUtils.defaultNotify(getApplicationContext(), "Đăng tin thành công");
+                    finish();
+
 //                            if(topicCode.equals(DBConstant.TOPIC_CODE_2)){
 //                                showDialog();
 //                            }
