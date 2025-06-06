@@ -7,6 +7,7 @@
     tools:context=".view.main.MainActivity"
     android:orientation="vertical"
     android:background="@drawable/bg_gadient">
+
     <LinearLayout
         android:gravity="center_vertical|top"
         android:layout_width="match_parent"
@@ -14,23 +15,25 @@
         android:padding="8dp"
         android:background="@drawable/bg_main_2"
         android:layout_height="150dp">
+
         <TextView
             android:id="@+id/tv_main_link"
             android:background="@drawable/link"
             android:layout_width="50dp"
             android:visibility="gone"
             android:layout_marginRight="20dp"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/tv_main_logout"
             android:background="@drawable/logout"
             android:layout_width="49dp"
-            android:layout_height="49dp"/>
+            android:layout_height="49dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -42,9 +45,10 @@
         android:layout_height="wrap_content">
 
     </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="20dp"/>
+        android:layout_height="20dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -145,11 +149,13 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_weight="1">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -159,7 +165,6 @@
             android:textAlignment="center"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            android:text="Luôn luôn lắng nghe\nSẳn sàng chia sẻ!"
-            />
+            android:text="Luôn luôn lắng nghe\nSẳn sàng chia sẻ!" />
     </LinearLayout>
 </LinearLayout>

@@ -13,7 +13,7 @@ public class DateTimeUtils {
 
     public static final DateTimeFormatter outputDateTimeFormatter = DateTimeFormatter.ofPattern("HH:mm dd-MM-yyyy");
 
-    public static Integer convertTimeToInteger(Long time){
+    public static Integer convertTimeToInteger(Long time) {
         StringBuilder stringDate = new StringBuilder();
         String[] array = sdf.format(time).split("-");
         for (int i = 0; i < array.length; i++) {
@@ -22,7 +22,7 @@ public class DateTimeUtils {
         return Integer.parseInt(stringDate.toString());
     }
 
-    public static String convertLocalDateTimeToDateTime(String inputLocalDateTime){
+    public static String convertLocalDateTimeToDateTime(String inputLocalDateTime) {
         LocalDateTime localDateTime = LocalDateTime.parse(inputLocalDateTime, inputDateTimeFormatter);
         return localDateTime.format(outputDateTimeFormatter);
     }

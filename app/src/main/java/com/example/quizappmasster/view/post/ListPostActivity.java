@@ -69,6 +69,7 @@ public class ListPostActivity extends AppCompatActivity {
     ListPostAdapter listPostAdapter;
 
     String topicCode;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,7 +84,7 @@ public class ListPostActivity extends AppCompatActivity {
         jsonParams.put("limit", 30);
         jsonParams.put("deleteFlag", false);
         jsonParams.put("topicCode", topicCode);
-        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8103/post/search_post", new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, "http://160.191.175.200:8103/post/search_post", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("response", response);
@@ -92,7 +93,7 @@ public class ListPostActivity extends AppCompatActivity {
                 });
                 List<PostDTO> postDTOS = new ArrayList<>();
                 for (PostDTO postDTO : responseDTO.getData()) {
-                    if(postDTO.getTopicCode().equals(topicCode)){
+                    if (postDTO.getTopicCode().equals(topicCode)) {
                         postDTOS.add(postDTO);
                     }
                 }
@@ -111,18 +112,18 @@ public class ListPostActivity extends AppCompatActivity {
                         }
                 );
 
-                        rvListPost.setAdapter(listPostAdapter);
+                rvListPost.setAdapter(listPostAdapter);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("error", error.toString() );
+                Log.e("error", error.toString());
             }
-        }){
+        }) {
             @Override
             protected Response<String> parseNetworkResponse(NetworkResponse response) {
                 try {
-                    Log.e("NetworkResponse", response.headers.toString() );
+                    Log.e("NetworkResponse", response.headers.toString());
                     // Parse the response using the correct encoding
                     String charset = HttpHeaderParser.parseCharset(response.headers);
                     String parsed = new String(response.data, "UTF-8");
@@ -131,10 +132,12 @@ public class ListPostActivity extends AppCompatActivity {
                     return Response.error(new ParseError(e));
                 }
             }
+
             @Override
             public byte[] getBody() {
                 return new JSONObject(jsonParams).toString().getBytes();
             }
+
             public String getBodyContentType() {
                 return "application/json;charset=UTF-8";
             }

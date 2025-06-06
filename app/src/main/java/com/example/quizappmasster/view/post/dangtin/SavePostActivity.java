@@ -90,9 +90,9 @@ public class SavePostActivity extends AppCompatActivity {
         btnSavePost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (selectedFiles.isEmpty() || selectedFiles.size() == 0){
+                if (selectedFiles.isEmpty() || selectedFiles.size() == 0) {
                     callSavePost(new ArrayList<>());
-                }else {
+                } else {
                     uploadFiles();
                 }
             }
@@ -101,7 +101,8 @@ public class SavePostActivity extends AppCompatActivity {
         btnChooseFiles.setOnClickListener(v -> openFileChooser());
 
     }
-    void callSavePost(List<String> files){
+
+    void callSavePost(List<String> files) {
         checkValidPost();
         Map<String, Object> jsonParams = new ArrayMap<>();
         jsonParams.put("topicCode", getIntent().getStringExtra(KeyConstants.INTENT_KEY_TOPIC_CODE));
@@ -109,18 +110,18 @@ public class SavePostActivity extends AppCompatActivity {
         jsonParams.put("content", edtContent.getText().toString().trim());
         jsonParams.put("userId", accountDTO.getUserName());
         jsonParams.put("author", accountDTO.getDisplayName());
-        if(files.isEmpty() || files.size() == 0){
+        if (files.isEmpty() || files.size() == 0) {
             files = new ArrayList<>();
         }
         jsonParams.put("listFile", ObjectMapperUtils.dtoToString(files));
-        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8103/post/insert", new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, "http://160.191.175.200:8103/post/insert", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("response", response);
                 ;
                 ResponseDTO<PostDTO> responseDTO = ObjectMapperUtils.stringToTypeReference(response, new TypeReference<ResponseDTO<PostDTO>>() {
                 });
-                if (responseDTO.getStatusCode().equals(GoogleSheetConstant.STATUS_SUCCESS)){
+                if (responseDTO.getStatusCode().equals(GoogleSheetConstant.STATUS_SUCCESS)) {
                     Log.e("response", "1");
                     NotifyUtils.defaultNotify(getApplicationContext(), "Đăng tin thành công");
                     finish();
@@ -128,7 +129,7 @@ public class SavePostActivity extends AppCompatActivity {
 //                            if(topicCode.equals(DBConstant.TOPIC_CODE_2)){
 //                                showDialog();
 //                            }
-                }else {
+                } else {
                     Log.e("response", "2");
                     NotifyUtils.defaultNotify(getApplicationContext(), "Đăng tin không thành công");
                     finish();
@@ -138,13 +139,13 @@ public class SavePostActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("error", error.toString() );
+                Log.e("error", error.toString());
             }
-        }){
+        }) {
             @Override
             protected Response<String> parseNetworkResponse(NetworkResponse response) {
                 try {
-                    Log.e("NetworkResponse", response.headers.toString() );
+                    Log.e("NetworkResponse", response.headers.toString());
                     // Parse the response using the correct encoding
                     String charset = HttpHeaderParser.parseCharset(response.headers);
                     String parsed = new String(response.data, "UTF-8");
@@ -153,10 +154,12 @@ public class SavePostActivity extends AppCompatActivity {
                     return Response.error(new ParseError(e));
                 }
             }
+
             @Override
             public byte[] getBody() {
                 return new JSONObject(jsonParams).toString().getBytes();
             }
+
             public String getBodyContentType() {
                 return "application/json;charset=UTF-8";
             }
@@ -166,12 +169,13 @@ public class SavePostActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         requestQueue.add(request);
     }
+
     private void checkValidPost() {
-        if(StringUtils.isBlank(edtTitle.getText().toString())){
+        if (StringUtils.isBlank(edtTitle.getText().toString())) {
             NotifyUtils.defaultNotify(getApplicationContext(), "Chủ đề trống");
             return;
         }
-        if(StringUtils.isBlank(edtContent.getText().toString())){
+        if (StringUtils.isBlank(edtContent.getText().toString())) {
             NotifyUtils.defaultNotify(getApplicationContext(), "Nội dung trống");
             return;
         }
@@ -189,7 +193,7 @@ public class SavePostActivity extends AppCompatActivity {
         tvDisplayName.setText(accountDTO.getDisplayName());
     }
 
-    private  void showDialog(){
+    private void showDialog() {
         Dialog dialog = new Dialog(SavePostActivity.this);
         dialog.setContentView(R.layout.dialog_khan_cap);
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
@@ -298,7 +302,8 @@ public class SavePostActivity extends AppCompatActivity {
                     String responseBodyString = response.body().string(); // Get the response content as a String
 
                     Log.e("response.body().toString()", responseBodyString);
-                    ResponseUploadFileDTO responseUploadFileDTO = ObjectMapperUtils.stringToTypeReference(responseBodyString, new TypeReference<ResponseUploadFileDTO>() {});
+                    ResponseUploadFileDTO responseUploadFileDTO = ObjectMapperUtils.stringToTypeReference(responseBodyString, new TypeReference<ResponseUploadFileDTO>() {
+                    });
                     runOnUiThread(() -> {
                         callSavePost(responseUploadFileDTO.getData());
                         Toast.makeText(SavePostActivity.this, "Upload ảnh thành công", Toast.LENGTH_SHORT).show();
@@ -330,7 +335,7 @@ public class SavePostActivity extends AppCompatActivity {
         // Build the request
         RequestBody requestBody = builder.build();
         okhttp3.Request request = new okhttp3.Request.Builder()
-                .url("http://103.218.122.240:9000/api/file/multi-file-upload")
+                .url("http://160.191.175.200:9000/api/file/multi-file-upload")
                 .addHeader("Accept", "application/json")
                 .addHeader("Content-Type", "multipart/form-data")
                 .post(requestBody)

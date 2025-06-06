@@ -77,9 +77,9 @@ public class DetailPostActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if((Boolean) postDTO.getIsLike()){
+                if ((Boolean) postDTO.getIsLike()) {
                     deleteLike();
-                }else {
+                } else {
                     insertLike();
                 }
 
@@ -90,7 +90,7 @@ public class DetailPostActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String input = edtInputComment.getText().toString().trim();
-                if(StringUtils.isBlank(input)){
+                if (StringUtils.isBlank(input)) {
                     NotifyUtils.defaultNotify(getApplicationContext(), "Nội dung trống");
                     return;
                 }
@@ -101,17 +101,17 @@ public class DetailPostActivity extends AppCompatActivity {
                 jsonParams.put("content", input);
                 jsonParams.put("postId", postDTO.getId());
                 jsonParams.put("author", accountDTO.getDisplayName());
-                StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8103/post/comment/insert", new Response.Listener<String>() {
+                StringRequest request = new StringRequest(Request.Method.POST, "http://160.191.175.200:8103/post/comment/insert", new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         Log.e("response", response);
                         ;
                         ResponseDTO<PostCommentDTO> responseDTO = ObjectMapperUtils.stringToTypeReference(response, new TypeReference<ResponseDTO<PostCommentDTO>>() {
                         });
-                        if (responseDTO.getStatusCode().equals(GoogleSheetConstant.STATUS_SUCCESS)){
+                        if (responseDTO.getStatusCode().equals(GoogleSheetConstant.STATUS_SUCCESS)) {
                             NotifyUtils.defaultNotify(getApplicationContext(), "Gửi thành công");
                             fetchDetailPost(postId);
-                        }else {
+                        } else {
                             NotifyUtils.defaultNotify(getApplicationContext(), "Gửi không thành công");
                         }
 
@@ -119,13 +119,13 @@ public class DetailPostActivity extends AppCompatActivity {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.e("error", error.toString() );
+                        Log.e("error", error.toString());
                     }
-                }){
+                }) {
                     @Override
                     protected Response<String> parseNetworkResponse(NetworkResponse response) {
                         try {
-                            Log.e("NetworkResponse", response.headers.toString() );
+                            Log.e("NetworkResponse", response.headers.toString());
                             // Parse the response using the correct encoding
                             String charset = HttpHeaderParser.parseCharset(response.headers);
                             String parsed = new String(response.data, "UTF-8");
@@ -134,10 +134,12 @@ public class DetailPostActivity extends AppCompatActivity {
                             return Response.error(new ParseError(e));
                         }
                     }
+
                     @Override
                     public byte[] getBody() {
                         return new JSONObject(jsonParams).toString().getBytes();
                     }
+
                     public String getBodyContentType() {
                         return "application/json;charset=UTF-8";
                     }
@@ -158,19 +160,19 @@ public class DetailPostActivity extends AppCompatActivity {
         jsonParams.put("userName", accountDTO.getUserName());
         jsonParams.put("type", DBConstant.TYPE_INTERACTION_LIKE);
         jsonParams.put("postId", postDTO.getId());
-        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8103/post/interact/delete", new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, "http://160.191.175.200:8103/post/interact/delete", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("response", response);
                 ;
                 ResponseDTO<PostInteractionDTO> responseDTO = ObjectMapperUtils.stringToTypeReference(response, new TypeReference<ResponseDTO<PostInteractionDTO>>() {
                 });
-                if (responseDTO.getStatusCode().equals(GoogleSheetConstant.STATUS_SUCCESS)){
+                if (responseDTO.getStatusCode().equals(GoogleSheetConstant.STATUS_SUCCESS)) {
                     imbIconLike.setBackgroundResource(R.drawable.ic_non_like);
                     Integer countLike = Integer.valueOf(tvCountLike.getText().toString().trim());
-                    tvCountLike.setText(String.valueOf(countLike-1));
+                    tvCountLike.setText(String.valueOf(countLike - 1));
                     postDTO.setIsLike(false);
-                }else {
+                } else {
                     NotifyUtils.defaultNotify(getApplicationContext(), "Lỗi");
                 }
 
@@ -178,13 +180,13 @@ public class DetailPostActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("error", error.toString() );
+                Log.e("error", error.toString());
             }
-        }){
+        }) {
             @Override
             protected Response<String> parseNetworkResponse(NetworkResponse response) {
                 try {
-                    Log.e("NetworkResponse", response.headers.toString() );
+                    Log.e("NetworkResponse", response.headers.toString());
                     // Parse the response using the correct encoding
                     String charset = HttpHeaderParser.parseCharset(response.headers);
                     String parsed = new String(response.data, "UTF-8");
@@ -193,11 +195,13 @@ public class DetailPostActivity extends AppCompatActivity {
                     return Response.error(new ParseError(e));
                 }
             }
+
             @Override
             public byte[] getBody() {
                 Log.e("getBody", jsonParams.toString());
                 return new JSONObject(jsonParams).toString().getBytes();
             }
+
             public String getBodyContentType() {
                 return "application/json;charset=UTF-8";
             }
@@ -212,20 +216,20 @@ public class DetailPostActivity extends AppCompatActivity {
         Map<String, Object> jsonParams = new ArrayMap<>();
         jsonParams.put("userName", accountDTO.getUserName());
         jsonParams.put("type", DBConstant.TYPE_INTERACTION_LIKE);
-        jsonParams.put("postId",  postDTO.getId());
-        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8103/post/interact/insert", new Response.Listener<String>() {
+        jsonParams.put("postId", postDTO.getId());
+        StringRequest request = new StringRequest(Request.Method.POST, "http://160.191.175.200:8103/post/interact/insert", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("response", response);
                 ;
                 ResponseDTO<PostInteractionDTO> responseDTO = ObjectMapperUtils.stringToTypeReference(response, new TypeReference<ResponseDTO<PostInteractionDTO>>() {
                 });
-                if (responseDTO.getStatusCode().equals(GoogleSheetConstant.STATUS_SUCCESS)){
+                if (responseDTO.getStatusCode().equals(GoogleSheetConstant.STATUS_SUCCESS)) {
                     imbIconLike.setBackgroundResource(R.drawable.ic_liked);
                     Integer countLike = Integer.valueOf(tvCountLike.getText().toString().trim());
-                    tvCountLike.setText(String.valueOf(countLike+1));
+                    tvCountLike.setText(String.valueOf(countLike + 1));
                     postDTO.setIsLike(true);
-                }else {
+                } else {
                     NotifyUtils.defaultNotify(getApplicationContext(), "Lỗi");
                 }
 
@@ -233,13 +237,13 @@ public class DetailPostActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("error", error.toString() );
+                Log.e("error", error.toString());
             }
-        }){
+        }) {
             @Override
             protected Response<String> parseNetworkResponse(NetworkResponse response) {
                 try {
-                    Log.e("NetworkResponse", response.headers.toString() );
+                    Log.e("NetworkResponse", response.headers.toString());
                     // Parse the response using the correct encoding
                     String charset = HttpHeaderParser.parseCharset(response.headers);
                     String parsed = new String(response.data, "UTF-8");
@@ -248,11 +252,13 @@ public class DetailPostActivity extends AppCompatActivity {
                     return Response.error(new ParseError(e));
                 }
             }
+
             @Override
             public byte[] getBody() {
                 Log.e("getBody", jsonParams.toString());
                 return new JSONObject(jsonParams).toString().getBytes();
             }
+
             public String getBodyContentType() {
                 return "application/json;charset=UTF-8";
             }
@@ -276,30 +282,28 @@ public class DetailPostActivity extends AppCompatActivity {
         rvListImage.setLayoutManager(new LinearLayoutManager(this));
 
 
-
-
         tvCountLike = findViewById(R.id.tv_detail_post_count_like);
         tvCountComment = findViewById(R.id.tv_detail_post_count_comment);
         rvListComment = findViewById(R.id.rv_list_comment);
         LinearLayoutManager llm = new LinearLayoutManager(DetailPostActivity.this);
-        llm.setOrientation(LinearLayoutManager.HORIZONTAL);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
         rvListComment.setLayoutManager(llm);
         fetchDetailPost(postId);
     }
 
-    void fetchDetailPost(Integer postId){
+    void fetchDetailPost(Integer postId) {
         Map<String, Object> jsonParams = new ArrayMap<>();
         jsonParams.put("userId", accountDTO.getUserName());
         jsonParams.put("type", DBConstant.TYPE_INTERACTION_LIKE);
         jsonParams.put("id", postId);
-        StringRequest request = new StringRequest(Request.Method.POST, "http://103.218.122.240:8103/post/get", new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, "http://160.191.175.200:8103/post/get", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("response", response);
                 ;
                 ResponseDTO<PostDTO> responseDTO = ObjectMapperUtils.stringToTypeReference(response, new TypeReference<ResponseDTO<PostDTO>>() {
                 });
-                if (responseDTO.getStatusCode().equals(GoogleSheetConstant.STATUS_SUCCESS)){
+                if (responseDTO.getStatusCode().equals(GoogleSheetConstant.STATUS_SUCCESS)) {
                     postDTO = responseDTO.getData();
                     listCommentAdapter = new ListCommentAdapter(getApplicationContext(), postDTO.getPostCommentDTOList());
                     rvListComment.setAdapter(listCommentAdapter);
@@ -309,23 +313,24 @@ public class DetailPostActivity extends AppCompatActivity {
                     tvCountLike.setText(String.valueOf(postDTO.getCountInteract()));
                     tvCountComment.setText(String.valueOf(postDTO.getCountComment()));
 
-                    if(postDTO.getIsLike()){
+                    if (postDTO.getIsLike()) {
                         imbIconLike.setBackgroundResource(R.drawable.ic_liked);
-                    }else {
+                    } else {
                         imbIconLike.setBackgroundResource(R.drawable.ic_non_like);
                     }
 
-                    List<String> listImage = ObjectMapperUtils.stringToTypeReference(postDTO.getListFile(), new TypeReference<List<String>>(){});
-                    if(CollectionUtils.isEmpty(listImage) || listImage.size() == 0){
+                    List<String> listImage = ObjectMapperUtils.stringToTypeReference(postDTO.getListFile(), new TypeReference<List<String>>() {
+                    });
+                    if (CollectionUtils.isEmpty(listImage) || listImage.size() == 0) {
                         rvListImage.setVisibility(View.GONE);
-                    }else {
+                    } else {
                         imageListAdapter = new ImageListAdapter(listImage);
                         rvListImage.setAdapter(imageListAdapter);
                         RecyclerView.ItemAnimator animator = new DefaultItemAnimator();
                         rvListImage.setItemAnimator(animator);
                         tvContent.setMovementMethod(new ScrollingMovementMethod());
                     }
-                }else {
+                } else {
                     NotifyUtils.defaultNotify(getApplicationContext(), "Đăng tin không thành công");
                     finish();
                 }
@@ -334,13 +339,13 @@ public class DetailPostActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("error", error.toString() );
+                Log.e("error", error.toString());
             }
-        }){
+        }) {
             @Override
             protected Response<String> parseNetworkResponse(NetworkResponse response) {
                 try {
-                    Log.e("NetworkResponse", response.headers.toString() );
+                    Log.e("NetworkResponse", response.headers.toString());
                     // Parse the response using the correct encoding
                     String charset = HttpHeaderParser.parseCharset(response.headers);
                     String parsed = new String(response.data, "UTF-8");
@@ -349,11 +354,13 @@ public class DetailPostActivity extends AppCompatActivity {
                     return Response.error(new ParseError(e));
                 }
             }
+
             @Override
             public byte[] getBody() {
                 Log.e("getBody", jsonParams.toString());
                 return new JSONObject(jsonParams).toString().getBytes();
             }
+
             public String getBodyContentType() {
                 return "application/json;charset=UTF-8";
             }

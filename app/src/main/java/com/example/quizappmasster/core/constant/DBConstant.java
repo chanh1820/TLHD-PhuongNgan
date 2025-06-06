@@ -63,7 +63,7 @@ public class DBConstant {
 
     public static final Integer DIEM_TRAC_NGHIEM_2 = 2;
     public static final String USER_NAME_UPLOAD_FILES = "TLHD-LEDIEM";
-    public static final String URL_RESOURCE_FILE = "http://103.218.122.240:9000/resource/" + USER_NAME_UPLOAD_FILES + "/";
+    public static final String URL_RESOURCE_FILE = "http://160.191.175.200:9000/resource/" + USER_NAME_UPLOAD_FILES + "/";
 
     public static List<LinkDTO> linkDTOList = new ArrayList<LinkDTO>() {{
         add(new LinkDTO(1, "Trang Luật Việt Nam", "https://luatvietnam.vn/", R.drawable.ic_baseline_info_24));
